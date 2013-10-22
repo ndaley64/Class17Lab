@@ -1,6 +1,5 @@
 package hashmaptest;
 
-import hashmaptest.Pokemon;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
