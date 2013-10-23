@@ -19,17 +19,6 @@ public class Lab5 {
         Employee emp3 = new Employee("Bond", "James", "007-07-0007");
         Employee emp4 = new Employee("Love", "Kim", "321-21-4321");
         
-        List<String> keyList = new ArrayList<String>();
-        
-        keyList.add(emp1.getSsn());
-        keyList.add(emp2.getSsn());
-        keyList.add(emp3.getSsn());
-        keyList.add(emp4.getSsn());
-        
-//        Set<String> keySet = new HashSet<String>();
-//        keyList.clear();
-//        keyList.addAll(keySet);
-        
         Map<String, Employee> employeeMap = new HashMap<String, Employee>();
         
         employeeMap.put(emp1.getSsn(), emp1);
@@ -47,7 +36,7 @@ public class Lab5 {
         System.out.println("");
         System.out.println("Entire map output with for each: ");
         
-        for(String s : keyList){
+        for(String s : employeeMap.keySet()){
             System.out.println(employeeMap.get(s).toString());
         }
     }
