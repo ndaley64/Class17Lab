@@ -1,11 +1,11 @@
 package class17lab;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
+import java.util.TreeMap;
 
 /**
  *
@@ -15,9 +15,9 @@ public class Lab6 {
     
     public static void main(String[] args) {
         Employee emp1 = new Employee("Bond", "James", "007-07-0007");
-        Employee emp2 = new Employee("Doe", "John", "123-12-1234");
+        Employee emp2 = new Employee("Doe", "John", "321-21-4321");
         Employee emp3 = new Employee("Bond", "James", "007-07-0007");
-        Employee emp4 = new Employee("Love", "Kim", "321-21-4321");
+        Employee emp4 = new Employee("Love", "Kim", "123-12-1234");
         
         Map<String, Employee> employeeMap = new HashMap<String, Employee>();
         
@@ -34,10 +34,19 @@ public class Lab6 {
         System.out.println(copy.toString());
         
         System.out.println("");
-        System.out.println("Entire map output with for each: ");
+        System.out.println("Entire map output with for each(map is sorted by SSN): ");
         
         for(String s : employeeMap.keySet()){
             System.out.println(employeeMap.get(s).toString());
+        }
+        
+        List<Employee> employeeList = new ArrayList<Employee>(employeeMap.values());
+        Collections.sort(employeeList, new EmployeeLastNameSorter());
+        
+        System.out.println("");
+        System.out.println("Sorted list from map values, sorted with a Comparator(sorted by last name):");
+        for(Employee e : employeeList){
+            System.out.println(e.toString());
         }
     }
 }

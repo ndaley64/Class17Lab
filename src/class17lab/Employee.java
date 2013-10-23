@@ -67,7 +67,7 @@ public class Employee implements Comparable{
 
     @Override
     public int compareTo(Object other) {
-            Employee o = (Employee)other;
+        Employee o = (Employee)other;
         
         return new CompareToBuilder()
                .append(this.ssn, o.ssn)
