@@ -23,7 +23,7 @@ public class Lab3 {
         employeeList.add(emp4);
         
         System.out.println("Employee list size: " + employeeList.size());
-        Employee copy = (Employee)employeeList.get(1);
+        Employee copy = employeeList.get(1);
         
         System.out.println("");
         System.out.println("Employee at index 2: ");
