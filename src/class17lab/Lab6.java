@@ -1,13 +1,17 @@
 package class17lab;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  *
  * @author ndaley
  */
-public class Lab5 {
+public class Lab6 {
     
     public static void main(String[] args) {
         Employee emp1 = new Employee("Bond", "James", "007-07-0007");

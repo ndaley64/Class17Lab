@@ -1,8 +1,9 @@
 package class17lab;
 
 import java.util.*;
+import org.apache.commons.lang3.builder.CompareToBuilder;
 
-public class Employee {
+public class Employee implements Comparable{
     private String lastName;
     private String firstName;
     private String ssn;
@@ -20,7 +21,6 @@ public class Employee {
     public void setSsn(String ssn) {
         this.ssn = ssn;
     }
-
 
     public String getFirstName() {
         return firstName;
@@ -63,6 +63,15 @@ public class Employee {
     @Override
     public String toString(){
         return lastName + ", " + firstName + " with SSN " + ssn;
+    }
+
+    @Override
+    public int compareTo(Object other) {
+            Employee o = (Employee)other;
+        
+        return new CompareToBuilder()
+               .append(this.ssn, o.ssn)
+               .toComparison();
     }
     
 }
