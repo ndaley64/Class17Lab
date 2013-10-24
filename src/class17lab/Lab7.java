@@ -11,7 +11,7 @@ import java.util.TreeMap;
  *
  * @author ndaley
  */
-public class Lab6 {
+public class Lab7 {
     
     public static void main(String[] args) {
         Employee emp1 = new Employee("Bond", "James", "007-07-0007");
@@ -19,7 +19,7 @@ public class Lab6 {
         Employee emp3 = new Employee("Bond", "James", "007-07-0007");
         Employee emp4 = new Employee("Love", "Kim", "123-12-1234");
         
-        Map<String, Employee> employeeMap = new TreeMap<String, Employee>();
+        Map<String, Employee> employeeMap = new HashMap<String, Employee>();
         
         employeeMap.put(emp1.getSsn(), emp1);
         employeeMap.put(emp2.getSsn(), emp2);
